@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
     <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'" [routerLink]="['/couriers']"></qrcode>
   </div>
   <hr />
-  <button mat-raised-button color="warn" [routerLink]="['/couriers']">Avboka</button>
+  <button mat-raised-button color="primary" [routerLink]="['/weight', courier]">Ändra vikt</button>
   <button mat-raised-button color="warn" [routerLink]="['/couriers']">Stäng</button>
   `,
   styleUrls: ['./qr.component.css'],
