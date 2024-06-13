@@ -11,9 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   template: `
   <h2>Välj ombud för att boka retur</h2>
-  <div><button mat-raised-button color="primary" [routerLink]="['/qr']">Postnord</button></div>
+  <div><button mat-raised-button color="primary" [routerLink]="['/weight']">Postnord</button></div>
   <br />
-  <button mat-raised-button color="primary" [routerLink]="['/qr']">DHL</button>
+  <button mat-raised-button color="primary" [routerLink]="['/weight']">DHL</button>
   `,
   styleUrls: ['./couriers.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
