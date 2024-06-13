@@ -11,9 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   template: `
   <h2>Välj ombud för att boka retur</h2>
-  <button mat-raised-button color="primary" [routerLink]="['/weight/postnord']">Postnord</button>
-  <button mat-raised-button color="primary" [routerLink]="['/weight/dhl']">DHL</button>
-  `,
+  <div class="rectangle">
+    <button mat-raised-button color="primary" [routerLink]="['/weight/postnord']">Postnord</button>
+    <button mat-raised-button color="primary" [routerLink]="['/weight/dhl']">DHL</button>
+  </div>
+`,
   styleUrls: ['./couriers.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

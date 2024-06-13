@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { MatButton } from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,15 +7,19 @@ import { RouterLink, ActivatedRoute, Router } from '@angular/router';
   standalone: true,
   imports: [
     RouterLink,
-    MatButton,
+    MatButtonModule,
   ],
   template: `
+
   <h2>Ange maxvikt</h2>
-  <h2>{{ courierName }}</h2>
-  <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '3' }">3 kg</button>
-  <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '5' }">5 kg</button>
-  <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '10' }">10 kg</button>
-  <button mat-raised-button color="primary" [routerLink]="['/couriers']">Stäng</button>
+  <div class="rectangle">
+    <h1>{{ courierName }}</h1>
+    <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '3' }">3 kg</button>
+    <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '5' }">5 kg</button>
+    <button mat-raised-button color="primary" [routerLink]="['/qr', courier]" [queryParams]="{ weight: '10' }">10 kg</button>
+  </div>
+  <hr />
+  <button mat-raised-button color="warn" [routerLink]="['/couriers']">Stäng</button>
   `,
   styleUrl: './weight.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

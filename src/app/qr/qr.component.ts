@@ -13,11 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
     QRCodeModule
   ],
   template: `
-  <h2>{{ courierName }}</h2>
-
-  <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-  <h2>{{ weight }} kg</h2>
-  <button mat-raised-button color="primary" [routerLink]="['/couriers']">Stäng</button>
+  <h2> Visa denna QR-kod hos paketombudet</h2>
+  <div class="rectangle">
+    <h2>{{ courierName }}</h2>
+    <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <h2>{{ weight }} kg</h2>
+  </div>
+  <hr />
+  <button mat-raised-button color="warn" [routerLink]="['/couriers']">Avboka</button>
+  <button mat-raised-button color="warn" [routerLink]="['/couriers']">Stäng</button>
   `,
   styleUrls: ['./qr.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
