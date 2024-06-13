@@ -15,9 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
   template: `
   <h2> Visa denna QR-kod hos paketombudet</h2>
   <div class="rectangle">
-    <h2>{{ courierName }}</h2>
-    <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    <h2>{{ weight }} kg</h2>
+    <h2>{{ courierName }} - {{ weight }} kg</h2>
+    <qrcode [qrdata]="'Your data string'" [width]="220" [errorCorrectionLevel]="'M'"></qrcode>
   </div>
   <hr />
   <button mat-raised-button color="warn" [routerLink]="['/couriers']">Avboka</button>

@@ -13,15 +13,10 @@ button {
   border-radius: 20px;
 }
 
-.rectangle {
-  background-color: #d3d3d3;
-  padding: 20px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  width: 350px; /* Full width minus the margins */
-  box-sizing: border-box;
-  border: 2px solid black;
+h2 {
+  margin: -5px 0 10px 0; /* Adjust this to control the space around h2 elements */
+}
+
+.weight h2 {
+  margin: 5px 0 -10px 0; /* Adjust this to control the space around h2 elements */
 }
