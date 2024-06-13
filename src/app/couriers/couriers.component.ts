@@ -11,11 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   template: `
   <h2>Välj ombud för att boka retur</h2>
-  <div><button mat-raised-button color="primary" [routerLink]="['/weight']">Postnord</button></div>
-  <br />
-  <button mat-raised-button color="primary" [routerLink]="['/weight']">DHL</button>
+  <button mat-raised-button color="primary" [routerLink]="['/weight/postnord']">Postnord</button>
+  <button mat-raised-button color="primary" [routerLink]="['/weight/dhl']">DHL</button>
   `,
   styleUrls: ['./couriers.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CouriersComponent { }
+export class CouriersComponent {}

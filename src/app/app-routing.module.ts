@@ -8,10 +8,10 @@ import { WeightComponent } from './weight/weight.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'qr', component: QrComponent },
+  { path: 'qr/:courier', component: QrComponent },
   { path: 'couriers', component: CouriersComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'weight', component: WeightComponent }
+  { path: 'weight/:courier', component: WeightComponent }
 ];
 
 @NgModule({
